@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RacerLink</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/layout_master.css" type="text/css" />
+    <link rel="stylesheet" href="css/style_master.css" type="text/css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">LambdaX</a>
+      </nav>
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-10">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div class="col-lg-6">
+                                <div class="card-body p-md-5 mx-md-4">
+                                    <div class="text-center">
+                                        <h4 class="mt-1 mb-3 pb-1">Welcome to LambdaX</h4>
+                                    </div>
+                                    <form>
+                                        <table>
+                                            <tr>
+                                                <td><label ref="username">Username:</label></td>
+                                                <td><input id="username" type="text" maxlength="20" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><label ref="password">Password:</label></td>
+                                                <td><input id="password" type="password" maxlength="20" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                        </table>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="window.LambdaX.login()">Login</button>
+                                        <button type="button" class="btn btn-default"
+                                            onclick="window.location='/signup.html'">Sign Up</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center">
+                                <div class="px-3 py-4 p-md-5 mx-md-4">
+                                    <h4 class="mb-4 text-center">A serverless chat demonstration</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="js/fontawesome.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/amazon-cognito-identity.min.js"></script>
+    <script src="js/apiGateway-js-sdk/lib/axios/dist/axios.standalone.js"></script>
+    <script src="js/apiGateway-js-sdk/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script src="js/apiGateway-js-sdk/lib/CryptoJS/rollups/sha256.js"></script>
+    <script src="js/apiGateway-js-sdk/lib/CryptoJS/components/hmac.js"></script>
+    <script src="js/apiGateway-js-sdk/lib/CryptoJS/components/enc-base64.js"></script>
+    <script src="js/apiGateway-js-sdk/lib/url-template/url-template.js"></script>
+    <script src="js/apiGateway-js-sdk/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script src="js/apiGateway-js-sdk/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script src="js/apiGateway-js-sdk/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script src="js/apiGateway-js-sdk/lib/apiGatewayCore/utils.js"></script>
+    <script src="js/apiGateway-js-sdk/apigClient.js"></script>
+
+    <script src="js/config.js"></script>
+    <script src="js/site.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            LambdaX.checkLogin(true, false);
+            $('#username').focus().keypress(function (event) {
+                if (event.keyCode === 13) {
+                    $('#password').focus();
+                }
+            });
+            $('#password').keypress(function (event) {
+                if (event.keyCode === 13) {
+                    window.LambdaX.login();
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>

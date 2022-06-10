@@ -1,0 +1,19 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "VisualEditor0",
+        "Effect": "Allow",
+        "Action": [
+          "dynamodb:BatchWriteItem",
+          "dynamodb:PutItem",
+          "dynamodb:Query"
+        ],
+        "Resource": [
+          "--lambda db arn goes here--/LambdaXConversations",
+          "--lambda db arn goes here--/LambdaXMessages",
+          "--lambda db arn goes here--/LamdaXConversations/index/Username-ConversationId-index"
+        ]
+      }
+    ]
+  }

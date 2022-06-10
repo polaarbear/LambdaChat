@@ -31,7 +31,7 @@ AWS account.  Affected files will include
 2. backend/policies (all 3 policies)
 
 You will need to make sure that you have the relevant services set up as you go along, for
-example to access the ARN numbers for your DynamoDB you will have to have it set up already,
+example to access the ARN numbers for DynamoDB you will need to have it set up already,
 and the same will be true for the AWS Cognito Identity services.
 
 Set up each of the functions in the backend/lambda folder to enable the storing and retrieving

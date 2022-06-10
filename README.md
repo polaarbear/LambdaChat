@@ -47,5 +47,6 @@ folder to your AWS account so that all of the different services can communicate
 
 There will likely be some additional troubleshooting as you go along, AWS is a rapidly changing
 environment.  I built this project over the course of a couple weekends to demo the Lambda tech,
-and half the battle was just locating all the different pieces.  I thought it might save someone
-(or my future self) from having to do all the leg-work again in the future.
+and half the battle was just locating all the different dependencies and the (mostly) boilerplate
+methods to log in and out using their identity service. I thought it might save someone (or my
+future self) from having to do all the leg-work again in the future.

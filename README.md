@@ -5,14 +5,14 @@ token-based account validation.
 
 # Front-End
 The front end UI is incredibly rudimentary, just a bare-basics HTML project with minimal usage of
-Bootstrap mainly for buttons and the necessary pages to create and confirm an account, log-in,
-and send and receive messages. It could easily be replaced by a front-end JS framework of your
-choosing.  The bulk of the useful code is in the JavaScript files.
+Bootstrap mainly for buttons. It contains the necessary HTML pages to create and confirm an account,
+log-in, and send and receive messages. They could easily be replaced by a front-end JS framework of your
+choosing.  The bulk of the useful code here is in the JavaScript files.
 
 # Back-End
-The back end of this project is done in Node.js.  It communicates to an AWS DynamoDB database
-to send and retrieve messages sent between users, and to allow users to look up available
-users to which they can send messages.  Routing is handled by the AWS API Gateway Service
+The back end of this project runs on AWS Lambda and Node.js. Lambda communicates to an instance of
+AWS DynamoDB to send and retrieve messages between users, and to allow users to look up other
+users to which they can send messages.  Routing is handled by the AWS API Gateway Service.
 
 # Setup
 There are several locations within the project that will need data edited before they are ready
